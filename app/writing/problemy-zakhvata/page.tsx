@@ -6,7 +6,7 @@ import { isRussianSite, russianUrl } from "../../site-language";
 import styles from "../kibernetika-na-dvoikh/reader.module.css";
 import paragraphs from "./manuscript.json";
 
-const title = "Проблемы захвата — Андрей Навроцкий";
+const title = "Проблемы захвата технически развитых планет — Андрей Навроцкий";
 const url = russianUrl + "/writing/problemy-zakhvata";
 const art = "/writing/problemy-zakhvata/";
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default async function StoryPage() {
     <main lang="ru" className={styles.reader}>
       <a href="/#writing">← Книги и сценарии</a>
       <article>
-        <header><h1>Проблемы захвата</h1><p>Андрей Навроцкий</p></header>
+        <header><h1>Проблемы захвата технически развитых планет</h1><p>Андрей Навроцкий</p></header>
         <div className={styles.prose}>
           {paragraphs.map((paragraph, i) => (
             <Fragment key={i}>
