@@ -2,36 +2,40 @@ const projects = [
   {
     title: "ContextTube",
     url: "https://contextube.ai",
+    descriptionRu: "Платформа для писателей и сценаристов. Вместе с ИИ здесь можно придумать мир, проработать характеры героев и выстроить сюжет.",
     description:
       "AI-powered creative development platform for storytellers. Build story worlds, develop characters, and structure narratives with AI as creative partner.",
   },
   {
     title: "Context Cloud",
     url: "https://contextcloud.studio",
+    descriptionRu: "Визуальный редактор вымышленных миров. Персонажи, сцена, мир, материалы, идеи и сюжетная арка образуют шесть связанных слоёв истории.",
     description:
       "Visual story world editor. Six interconnected layers — Characters, Stage, World, References, Ideas, and Arc — for building rich narrative universes.",
   },
   {
     title: "Op Assistant",
     url: null,
+    descriptionRu: "Приложение для iOS помогает операторам экструзионных линий сканировать и подбирать материалы с помощью ИИ. Доступно в TestFlight.",
     description:
       "iOS app for industrial operations. AI-powered material scanning and matching for plastic extrusion manufacturing. Available on TestFlight.",
   },
   {
     title: "Ohana",
     url: null,
+    descriptionRu: "Студия, где люди и ИИ-агенты вместе берутся за творческие и технические проекты.",
     description:
       "Human-AI collaborative studio. A team of humans and AI agents working together across creative and technical projects.",
   },
 ];
 
-export default function Projects() {
+export default function Projects({ russian }: { russian: boolean }) {
   return (
     <section id="projects" className="py-24 md:py-32 bg-charcoal-800/40">
       <div className="section-container">
         <div className="reveal">
           <h2 className="section-heading">
-            <span className="gold-accent">Things</span> I&apos;m Building
+            <span className="gold-accent">{russian ? "Мои" : "Things"}</span>{russian ? " проекты" : " I'm Building"}
           </h2>
         </div>
 
@@ -47,7 +51,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 <p className="text-warm-200/70 leading-relaxed mb-4">
-                  {project.description}
+                  {russian ? project.descriptionRu : project.description}
                 </p>
                 {project.url && (
                   <a
@@ -56,7 +60,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm text-gold-400 hover:text-gold-500 transition-colors"
                   >
-                    Visit
+                    {russian ? "Открыть проект" : "Visit"}
                     <svg
                       width="14"
                       height="14"

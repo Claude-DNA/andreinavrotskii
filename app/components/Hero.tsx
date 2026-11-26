@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ russian }: { russian: boolean }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-gradient dot-pattern overflow-hidden">
       {/* Decorative circles */}
@@ -7,16 +7,16 @@ export default function Hero() {
 
       <div className="relative text-center px-6">
         <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-warm-50 mb-6 animate-fade-in gold-glow">
-          Andrei Navrotskii
+          {russian ? "Андрей Навроцкий" : "Andrei Navrotskii"}
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gold-400 tracking-wide font-light animate-fade-in-up">
-          Builder. Storyteller. Explorer.
+          {russian ? "Создаю. Пишу. Исследую." : "Builder. Storyteller. Explorer."}
         </p>
         <div className="mt-12 animate-fade-in-up">
           <a
             href="#about"
             className="inline-block text-warm-200/50 hover:text-gold-400 transition-colors"
-            aria-label="Scroll down"
+            aria-label={russian ? "Перейти к разделу «Обо мне»" : "Scroll down"}
           >
             <svg
               width="24"

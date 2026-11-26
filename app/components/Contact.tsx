@@ -42,13 +42,13 @@ const contacts = [
   },
 ];
 
-export default function Contact() {
+export default function Contact({ russian }: { russian: boolean }) {
   return (
     <section id="contact" className="py-24 md:py-32">
       <div className="section-container">
         <div className="reveal">
           <h2 className="section-heading">
-            <span className="gold-accent">Get</span> in Touch
+            <span className="gold-accent">{russian ? "Как" : "Get"}</span>{russian ? " связаться со мной" : " in Touch"}
           </h2>
         </div>
 

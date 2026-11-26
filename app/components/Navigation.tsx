@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#writing", label: "Writing" },
-  { href: "#philosophy", label: "Philosophy" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About", ru: "Обо мне" },
+  { href: "#projects", label: "Projects", ru: "Проекты" },
+  { href: "#writing", label: "Writing", ru: "Книги и сценарии" },
+  { href: "#philosophy", label: "Philosophy", ru: "Принципы" },
+  { href: "#contact", label: "Contact", ru: "Контакты" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ russian }: { russian: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -44,17 +44,24 @@ export default function Navigation() {
                 href={link.href}
                 className="text-sm text-warm-200/70 hover:text-gold-400 transition-colors"
               >
-                {link.label}
+                {russian ? link.ru : link.label}
               </a>
             </li>
           ))}
         </ul>
 
+        <a href={russian ? "https://andreinavrotskii.com" : "https://ru.andreinavrotskii.com"}
+          hrefLang={russian ? "en" : "ru"} lang={russian ? "en" : "ru"}
+          className="ml-auto mr-4 md:ml-4 md:mr-0 text-sm text-gold-400 hover:underline">
+          {russian ? "English" : "Русский"}
+        </a>
+
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-warm-200/70 hover:text-gold-400 transition-colors"
-          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-label={russian ? "Меню" : "Toggle menu"}
         >
           <svg
             width="24"
@@ -84,7 +91,7 @@ export default function Navigation() {
                   onClick={() => setMobileOpen(false)}
                   className="block text-warm-200/70 hover:text-gold-400 transition-colors"
                 >
-                  {link.label}
+                  {russian ? link.ru : link.label}
                 </a>
               </li>
             ))}
