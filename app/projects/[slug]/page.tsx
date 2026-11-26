@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { englishUrl, isRussianSite } from "../../site-language";
@@ -31,6 +32,9 @@ export default async function ProjectPage(props: Props) {
     <main className="max-w-3xl mx-auto px-6 py-12 md:py-20">
       <a href="/#projects" className="text-gold-400 hover:underline">← All projects</a>
       <article className="mt-12">
+        {p.slug === "contextube" && (
+          <Image src="/projects/shared-context.webp" alt="A manuscript unfolds into luminous layers of connected ideas." width={1280} height={720} sizes="(max-width: 768px) 100vw, 720px" priority className="mb-8 w-full aspect-[2.6/1] object-cover rounded-lg" />
+        )}
         <h1 className="font-serif text-4xl md:text-6xl text-warm-50 leading-tight">{p.title}</h1>
         <p className="mt-6 text-xl leading-relaxed text-warm-200">{p.description}</p>
         {p.slug === "contextube" && <ConteXtubeOverview />}

@@ -31,10 +31,10 @@ export default function CloudStudioOverview() {
       </section>
       <section>
         <h2>Auditioning a moment</h2>
-        <p>The manual gives a compact direction for an actor: <em>(Grief − Hope) × Calm</em>. Grief is what the character feels. Hope is what the situation calls for and she can no longer summon. Calm is what the people around her see. The writer can set the intensity and inspect the direction the model receives.</p>
+        <p>For the captain waiting on the bridge, the writer might choose <em>(Grief − Hope) × Calm</em>. Grief is what the character feels. Hope is what the situation calls for and she can no longer summon. Calm is what the people around her see. The writer can set the intensity and inspect the direction the model receives.</p>
         <ProjectFigure image="studio-formula" alt="Studio’s formula card separates felt grief, absent hope and outward calm." caption="The formula gives the actor a private feeling and a public face. Changing either can change how the same line is delivered." />
-        <p>For the captain on the bridge, try giving that direction before her question about the shift. Read the take, then direct the actor to play it more quietly. Or give the officer a reply and let the exchange continue. Audition can blend up to three saved states in proportions the writer chooses. When a take works, pin it to this character in this scene. It survives a graph rebuild. </p>
-        <ProjectFigure image="studio-pin" alt="A take in the Audition panel with controls to save it to the cloud or the state library." caption="Pin the chosen take to preserve the captain’s state at this particular point in the story." />
+        <p>The screenshot shows another character, Mara, in the break room. She sets down her cup and watches the line monitor. When she speaks, she wants the crew to hear the news from her. Her hand finding the edge of the counter gives the fear away. From the same panel the writer can direct a quieter performance, try another take, or pin this one to Mara’s scene.</p>
+        <ProjectFigure image="mara-audition" width={799} height={557} alt="Mara’s break-room take in the Audition panel, with a direction field and controls to try another take or save the state." caption="Save state to the cloud keeps Mara’s performance with this scene. Add to My Library keeps the state available for another character." />
       </section>
       <section>
         <h2>Using a state again</h2>
