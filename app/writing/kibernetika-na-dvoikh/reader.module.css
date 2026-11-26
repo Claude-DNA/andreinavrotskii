@@ -1,0 +1,12 @@
+.reader { max-width: 46rem; margin: auto; padding: 2rem 1.35rem 4rem; }
+.reader a { color: #e0bf78; text-underline-offset: .25em; }
+.reader a:hover, .reader a:focus-visible { text-decoration: underline; }
+.reader header { margin: 4rem 0 2rem; }
+.reader h1 { font-family: var(--font-playfair), Georgia, serif; font-size: clamp(2.4rem, 7vw, 4.3rem); line-height: 1.13; }
+.reader header p { margin-top: 1rem; color: #d9bc87; }
+.prose { font-family: Georgia, serif; font-size: clamp(1.1rem, 2.5vw, 1.27rem); line-height: 1.68; margin-bottom: 3rem; }
+.prose p { margin: .85em 0; white-space: pre-wrap; overflow-wrap: break-word; }
+.prose p:empty { height: 1em; }
+.prose :global(.scene-break) { text-align: center; color: #d9bc87; letter-spacing: .45em; margin: 2.1em 0 1.4em; }
+.prose figure { margin: 2.3rem 0; }
+.prose img { display: block; width: 100%; height: auto; border-radius: .35rem; }

@@ -10,7 +10,11 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
 
         <div className="space-y-10 max-w-3xl">
           <h3 lang="ru" className="reveal font-serif text-2xl text-warm-50">
-            «Кибернетика на двоих»
+            {russian ? (
+              <a href="/writing/kibernetika-na-dvoikh" className="underline decoration-gold-500/50 underline-offset-4 hover:text-gold-400">
+                «Кибернетика на двоих»
+              </a>
+            ) : "«Кибернетика на двоих»"}
           </h3>
 
           {/* The Path of People */}
