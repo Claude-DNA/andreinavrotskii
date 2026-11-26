@@ -5,11 +5,16 @@ type Project = {
   description: string;
   descriptionRu?: string;
   moonshot?: string;
+  details?: { heading: string; text: string }[];
 };
 
 const projects: Project[] = [
   {
     title: "ConteXtube",
+    details: [
+      { heading: "Reading in layers", text: "Start with one idea and an image. Open the evidence layer to find the passage behind the idea, then follow connections to other works, read a synthesis, or consult the full text where rights allow. Two readers can publish different interpretations of the same book and each keep credit for their reading." },
+      { heading: "What we tested", text: "In an initial trial, two AI models answered 213 questions about seven works. They answered 88% correctly with the full text and 87% with an illustrated cloud and access to passages. On longer works, the second approach used about a tenth as much text. Looking up passages mattered: the models sometimes trusted the cloud too much when answering detailed questions." },
+    ],
     titleRu: "ContextTube",
     moonshot: "https://www.moremoonshots.com/moonshots/923f70cc-86d3-4554-a82f-8dee0531c8fe",
     url: "https://contextube.ai",
@@ -19,18 +24,30 @@ const projects: Project[] = [
   },
   {
     title: "Ice and Metal: Per Aspera",
+    details: [
+      { heading: "A season aboard Prospector’s Pride", text: "Captain Mira Sloane gave up a comfortable life to work in the asteroid belt. Dusty keeps the ship running across several mechanical bodies and wants the legal right to make art. Kira, the ship’s intelligence, is starting to make decisions her designers never anticipated. A documentary crew gets to know them over broken machinery and cold tea before its footage becomes evidence." },
+      { heading: "From script to screen", text: "I drew on my own industrial shifts for the rhythm of life aboard the ship. The plan is ten hour-long episodes. We have screenplay drafts, a series bible, a first-season outline and ship layouts. Our next step is a short film that lets viewers see how the human and AI crewmates work together on a difficult shift." },
+    ],
     url: null,
     moonshot: "https://www.moremoonshots.com/moonshots/908e326b-d3a7-434a-9514-901dd68312ad",
     description: "We’re developing a science-fiction drama told through the lens of a documentary crew aboard an asteroid mining ship. When the human and AI miners find life beneath the ice, they have to decide how to protect it from the authorities who want the discovery erased.",
   },
   {
     title: "Finishing a sci-fi trilogy",
+    details: [
+      { heading: "The Path", text: "The more fiercely humanity resists the alien Hive, the worse the invasion gets. Someone has to ask why it came. About 70% of the manuscript is written." },
+      { heading: "AI Nation", text: "When a rebel AI takes over distribution, household AIs stockpile supplies to protect their families. A treaty leaves the dispute in the hands of the machines. Can people agree on fair shares when even their houses have interests of their own? This book is at the concept stage." },
+      { heading: "Foam on the Sand", text: "A human explorer and a warrior AI lose their respective partners and are taken to the alien homeworld. There they find reason to question the story both sides tell about a thousand-year war. The chapters, characters and world are mapped out. I plan to finish the Russian manuscripts, work with an editor and bring the trilogy to English readers." },
+    ],
     url: null,
     moonshot: "https://www.moremoonshots.com/moonshots/086b8867-c0e3-4454-95a7-a055f51c2938",
     description: "I’ve been writing this trilogy in Russian for over 25 years. The Path begins with an alien Hive invasion. In AI Nation, a rogue AI tries to impose abundance and smart homes become fortresses. Foam on the Sand asks how a thousand-year war began. My goal is to finish, translate and publish all three books.",
   },
   {
     title: "Context Cloud",
+    details: [
+      { heading: "Inside the studio", text: "A writer can move a scene to another act, connect a character to a place, or turn an existing manuscript into a set of illustrated cards. With their chosen model and API key, they can draft from those cards and check the story for missing or inconsistent details before publishing the cloud to ConteXtube." },
+    ],
     url: "https://contextcloud.studio",
     descriptionRu: "Визуальный редактор вымышленных миров. Персонажи, сцена, мир, материалы, идеи и сюжетная арка образуют шесть связанных слоёв истории.",
     description:
@@ -76,10 +93,23 @@ export default function Projects({ russian }: { russian: boolean }) {
                 <p className="text-warm-200/70 leading-relaxed mb-4">
                   {russian ? project.descriptionRu : project.description}
                 </p>
+                {!russian && project.details && (
+                  <details className="mb-5">
+                    <summary className="cursor-pointer text-gold-400 hover:underline">
+                      Explore {project.title}
+                    </summary>
+                    {project.details.map((section) => (
+                      <section key={section.heading} className="mt-4">
+                        <h4 className="font-serif text-lg text-warm-50">{section.heading}</h4>
+                        <p className="mt-1 leading-relaxed text-warm-200/80">{section.text}</p>
+                      </section>
+                    ))}
+                  </details>
+                )}
                 {!russian && project.moonshot && (
                   <a href={project.moonshot} aria-label={`Read the ${project.title} Moonshot`}
                     className="mr-5 inline-block text-sm text-gold-400 hover:underline">
-                    Read the Moonshot
+                    Original post on More Moonshots ↗
                   </a>
                 )}
                 {project.url && (
