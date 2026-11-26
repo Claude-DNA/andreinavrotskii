@@ -1,3 +1,4 @@
+import ProjectFigure from "./ProjectFigure";
 import Image from "next/image";
 
 export default function CloudStudioOverview() {
@@ -31,7 +32,14 @@ export default function CloudStudioOverview() {
       <section>
         <h2>Auditioning a moment</h2>
         <p>The manual gives a compact direction for an actor: <em>(Grief − Hope) × Calm</em>. Grief is what the character feels. Hope is what the situation calls for and she can no longer summon. Calm is what the people around her see. The writer can set the intensity and inspect the direction the model receives.</p>
-        <p>For the captain on the bridge, try giving that direction before her question about the shift. Read the take, then direct the actor to play it more quietly. Or give the officer a reply and let the exchange continue. Audition can blend up to three saved states in proportions the writer chooses. When a take works, pin it to this character in this scene. It survives a graph rebuild. Save the formula to the state library if another scene might call for it.</p>
+        <ProjectFigure image="studio-formula" alt="Studio’s formula card separates felt grief, absent hope and outward calm." caption="The formula gives the actor a private feeling and a public face. Changing either can change how the same line is delivered." />
+        <p>For the captain on the bridge, try giving that direction before her question about the shift. Read the take, then direct the actor to play it more quietly. Or give the officer a reply and let the exchange continue. Audition can blend up to three saved states in proportions the writer chooses. When a take works, pin it to this character in this scene. It survives a graph rebuild. </p>
+        <ProjectFigure image="studio-pin" alt="A take in the Audition panel with controls to save it to the cloud or the state library." caption="Pin the chosen take to preserve the captain’s state at this particular point in the story." />
+      </section>
+      <section>
+        <h2>Using a state again</h2>
+        <p>Saving the formula to the state library lets the writer use it in another scene. Imagine the missing crew member’s sister calling the bridge. She and the captain may both be grieving and outwardly calm, but the sister has a different relationship to the person who disappeared. Give her the same starting state and audition her response. Her own history and the circumstances of the call still shape what she says.</p>
+        <ProjectFigure image="studio-library" alt="The State Library showing character states a writer can select for an audition." caption="A saved state can be cast in a new scene. The writer can adjust its weight and mix it with other states before reading the take." />
       </section>
       <section>
         <h2>From a working draft to a reader’s edition</h2>

@@ -1,3 +1,4 @@
+import ProjectFigure from "./ProjectFigure";
 import Image from "next/image";
 
 export default function ConteXtubeOverview() {
@@ -11,6 +12,7 @@ export default function ConteXtubeOverview() {
       <section>
         <h2>Five ways into <em>The Trial</em></h2>
         <p>The project manual uses Kafka’s court to show what each layer adds. You can stop when your question is answered.</p>
+        <ProjectFigure image="shared-context" alt="A manuscript opens into illustrated layers, with connections branching from the far side." caption="One work can support several paths through its ideas. Follow a connection across works, or go deeper to inspect its source." />
         <ol className="mt-4 list-decimal space-y-3 pl-6 marker:text-gold-400">
           <li><strong>Essence.</strong> An illustrated idea captures the feeling of guilt without a known cause. It gives the reader a starting point in a few words.</li>
           <li><strong>Evidence.</strong> A passage from the book sits beside the idea. You can judge for yourself whether the language supports that reading.</li>
@@ -18,6 +20,11 @@ export default function ConteXtubeOverview() {
           <li><strong>Synthesis.</strong> Commentary brings the passages and parallels together. Here the curator has room to explain why the comparison matters and where the two works differ.</li>
           <li><strong>Narrative.</strong> The deepest layer holds the source text and notes where publication rights allow. A reader can return to the surrounding scene and form a different interpretation.</li>
         </ol>
+      </section>
+      <section>
+        <h2>Exploring a published story</h2>
+        <p>Here is a different way in. Open the cloud for <em>The Unindexed Dream</em> and start with the Archivist. Beside the character card, you can see the Archive Stacks as a place and Earth Colony, 2147 as the setting. The same view also holds the plot and the works that informed the story. A reader interested in the Archivist’s surroundings can begin there. Someone curious about the author’s influences can begin with the references.</p>
+        <ProjectFigure image="unindexed-dream" width={1097} height={900} alt="The Unindexed Dream cloud showing references above illustrated plot, character, place and setting cards." caption="The Unindexed Dream on ConteXtube. Each card gives the reader a different starting point in the same story." />
       </section>
       <section>
         <h2>Inside the author’s studio</h2>
