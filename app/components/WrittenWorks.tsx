@@ -9,13 +9,13 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
         </div>
 
         <div className="space-y-10 max-w-3xl">
-          <h3 lang="ru" className="reveal font-serif text-2xl text-warm-50">
-            {russian ? (
+          {russian && (
+            <h3 lang="ru" className="reveal font-serif text-2xl text-warm-50">
               <a href="/writing/kibernetika-na-dvoikh" className="underline decoration-gold-500/50 underline-offset-4 hover:text-gold-400">
                 «Кибернетика на двоих»
               </a>
-            ) : "«Кибернетика на двоих»"}
-          </h3>
+            </h3>
+          )}
 
           {russian ? (
             <a href="/writing/problemy-zakhvata" className="reveal block group">
@@ -52,7 +52,9 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
               </li>
               <li>
                 <span className="text-gold-400 text-sm font-medium">{russian ? "Книга 3" : "Book 3"}</span>
-                <p className="text-warm-200/80">{russian ? "«Пена на песке»" : "“Foam on the Sand”"}</p>
+                <p className="text-warm-200/80">
+                  {russian ? "«Пена на песке». Как началась тысячелетняя война?" : "“Foam on the Sand” — How a thousand-year war began"}
+                </p>
               </li>
             </ul>
           </div>
