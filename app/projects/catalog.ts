@@ -50,14 +50,12 @@ export const projects: Project[] = [
   {
     slug: "context-cloud",
     summary: "A visual writing studio for building a story from its characters, places, scenes and ideas.",
-    title: "Context Cloud",
-    details: [
-      { heading: "Inside the studio", text: "A writer can move a scene to another act, connect a character to a place, or turn an existing manuscript into a set of illustrated cards. With their chosen model and API key, they can draft from those cards and check the story for missing or inconsistent details before publishing the cloud to ConteXtube." },
-    ],
+    title: "Context Cloud Studio",
+    titleRu: "Context Cloud",
     url: "https://contextcloud.studio",
     descriptionRu: "Визуальный редактор вымышленных миров. Персонажи, сцена, мир, материалы, идеи и сюжетная арка образуют шесть связанных слоёв истории.",
     description:
-      "Visual story world editor. Six interconnected layers — Characters, Stage, World, References, Ideas, and Arc — for building rich narrative universes.",
+      "Context Cloud Studio is a visual workspace for writers. Map what happens in a story, follow what each scene changes for the people in it, and try a line of dialogue in character before committing it to the manuscript.",
   },
   {
     slug: "op-assistant",
