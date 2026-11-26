@@ -9,6 +9,10 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
         </div>
 
         <div className="space-y-10 max-w-3xl">
+          <h3 lang="ru" className="reveal font-serif text-2xl text-warm-50">
+            «Кибернетика на двоих»
+          </h3>
+
           {/* The Path of People */}
           <div className="reveal">
             <h3 className="font-serif text-2xl text-warm-50 mb-2">
