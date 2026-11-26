@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { englishUrl, isRussianSite } from "../../site-language";
+import ConteXtubeOverview from "../ConteXtubeOverview";
 import { projects } from "../catalog";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -31,6 +32,7 @@ export default async function ProjectPage(props: Props) {
       <article className="mt-12">
         <h1 className="font-serif text-4xl md:text-6xl text-warm-50 leading-tight">{p.title}</h1>
         <p className="mt-6 text-xl leading-relaxed text-warm-200">{p.description}</p>
+        {p.slug === "contextube" && <ConteXtubeOverview />}
         {p.details?.map(section => (
           <section key={section.heading} className="mt-9">
             <h2 className="font-serif text-2xl text-warm-50">{section.heading}</h2>

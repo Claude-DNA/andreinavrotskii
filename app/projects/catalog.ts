@@ -15,10 +15,6 @@ export const projects: Project[] = [
     slug: "contextube",
     summary: "An illustrated library where readers and AI agents can explore the ideas, evidence and connections in a work.",
     title: "ConteXtube",
-    details: [
-      { heading: "Reading in layers", text: "Start with one idea and an image. Open the evidence layer to find the passage behind the idea, then follow connections to other works, read a synthesis, or consult the full text where rights allow. Two readers can publish different interpretations of the same book and each keep credit for their reading." },
-      { heading: "What we tested", text: "In an initial trial, two AI models answered 213 questions about seven works. They answered 88% correctly with the full text and 87% with an illustrated cloud and access to passages. On longer works, the second approach used about a tenth as much text. Looking up passages mattered: the models sometimes trusted the cloud too much when answering detailed questions." },
-    ],
     titleRu: "ContextTube",
     moonshot: "https://www.moremoonshots.com/moonshots/923f70cc-86d3-4554-a82f-8dee0531c8fe",
     url: "https://contextube.ai",
