@@ -36,6 +36,14 @@ export default function Home({ russian }: { russian: boolean }) {
         <About russian={russian} />
         <Projects russian={russian} />
         <WrittenWorks russian={russian} />
+        {!russian && (
+          <section id="essays" className="py-20 bg-charcoal-800/40">
+            <div className="section-container">
+              <h2 className="section-heading"><a className="gold-accent hover:underline" href="/essays">Essays →</a></h2>
+              <p className="max-w-2xl text-warm-200/80">What happens to human purpose when work becomes optional? What can a group of AI agents learn together? Essays on cooperation, agency and life alongside AI.</p>
+            </div>
+          </section>
+        )}
         <Philosophy russian={russian} />
         <Contact russian={russian} />
       </main>

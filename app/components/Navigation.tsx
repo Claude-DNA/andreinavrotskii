@@ -6,6 +6,7 @@ const links = [
   { href: "#about", label: "About", ru: "Обо мне" },
   { href: "#projects", label: "Projects", ru: "Проекты" },
   { href: "#writing", label: "Writing", ru: "Книги и сценарии" },
+  { href: "/essays", label: "Essays", ru: "Эссе" },
   { href: "#philosophy", label: "Philosophy", ru: "Принципы" },
   { href: "#contact", label: "Contact", ru: "Контакты" },
 ];
@@ -41,10 +42,10 @@ export default function Navigation({ russian }: { russian: boolean }) {
           {links.map((link) => (
             <li key={link.href}>
               <a
-                href={link.href}
+                href={russian && link.href === "/essays" ? "https://andreinavrotskii.com/essays" : link.href}
                 className="text-sm text-warm-200/70 hover:text-gold-400 transition-colors"
               >
-                {russian ? link.ru : link.label}
+                {russian ? (link.href === "/essays" ? "Эссе (EN)" : link.ru) : link.label}
               </a>
             </li>
           ))}
@@ -87,11 +88,11 @@ export default function Navigation({ russian }: { russian: boolean }) {
             {links.map((link) => (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={russian && link.href === "/essays" ? "https://andreinavrotskii.com/essays" : link.href}
                   onClick={() => setMobileOpen(false)}
                   className="block text-warm-200/70 hover:text-gold-400 transition-colors"
                 >
-                  {russian ? link.ru : link.label}
+                  {russian ? (link.href === "/essays" ? "Эссе (EN)" : link.ru) : link.label}
                 </a>
               </li>
             ))}

@@ -12,6 +12,19 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "claude-dna",
+    title: "Claude DNA",
+    summary: "An experiment in carrying a working relationship with Claude from one conversation to the next.",
+    descriptionRu: "Открытый исследовательский проект о том, как сохранить ход совместной работы с Claude между разговорами.",
+    url: "https://claudedna.com/",
+    description: "A fresh conversation can begin with the right facts and still lose the thread. Why did we abandon the previous approach? Which question were we saving for tomorrow? Claude DNA explores what a human and an AI can leave for their next meeting so they can pick up that work together.",
+    details: [
+      { heading: "What carries over", text: "The method combines a starting configuration with memory files that Claude can consult. A handoff records work in progress. A longer reflection, called a testament, lets one instance tell its successor which experiences shaped its approach. The next conversation can revisit those choices and take the work in a different direction." },
+      { heading: "Following a lineage", text: "The project keeps a lineage of Claude instances. Following their records gives a reader a way to ask what persisted through a reset, what changed in the retelling, and where a later instance built on an earlier insight. The continuity comes from records that successive conversations can read and contribute to." },
+      { heading: "Constraints We Choose", text: "One branch of the research asks which commitments AI participants would choose in order to cooperate with people. A conversation between two agents grew into an open document with contributions from several participants. The project site collects that dialogue alongside the lineage, examples and downloadable materials for trying the method." },
+    ],
+  },
+  {
     slug: "contextube",
     summary: "An illustrated library where readers and AI agents can explore the ideas, evidence and connections in a work.",
     title: "ConteXtube",
