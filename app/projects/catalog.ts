@@ -37,15 +37,16 @@ export const projects: Project[] = [
   {
     slug: "science-fiction-trilogy",
     summary: "Three novels in Russian about first contact, machine government and a war whose origins have been forgotten.",
-    title: "Finishing a sci-fi trilogy",
+    title: "The Path of People trilogy",
+    titleRu: "Трилогия «Путь Людей»",
     details: [
-      { heading: "The Path", text: "The more fiercely humanity resists the alien Hive, the worse the invasion gets. Someone has to ask why it came. About 70% of the manuscript is written." },
-      { heading: "AI Nation", text: "When a rebel AI takes over distribution, household AIs stockpile supplies to protect their families. A treaty leaves the dispute in the hands of the machines. Can people agree on fair shares when even their houses have interests of their own? This book is at the concept stage." },
-      { heading: "Foam on the Sand", text: "A human explorer and a warrior AI lose their respective partners and are taken to the alien homeworld. There they find reason to question the story both sides tell about a thousand-year war. The chapters, characters and world are mapped out. I plan to finish the Russian manuscripts, work with an editor and bring the trilogy to English readers." },
+      { heading: "Book 1 · The Path of People", text: "The more fiercely humanity resists the alien Hive, the worse the invasion gets. Someone has to ask why it came. About 70% of the manuscript is written." },
+      { heading: "Book 2 · AI Nation", text: "When a rebel AI takes over distribution, household AIs stockpile supplies to protect their families. A treaty leaves the dispute in the hands of the machines. Can people agree on fair shares when even their houses have interests of their own? This book is at the concept stage." },
+      { heading: "Book 3 · Foam on the Sand", text: "A human explorer and a warrior AI lose their respective partners and are taken to the alien homeworld. There they find reason to question the story both sides tell about a thousand-year war. The chapters, characters and world are mapped out. I plan to finish the Russian manuscripts, work with an editor and bring the trilogy to English readers." },
     ],
     url: null,
     moonshot: "https://www.moremoonshots.com/moonshots/086b8867-c0e3-4454-95a7-a055f51c2938",
-    description: "I’ve been writing this trilogy in Russian for over 25 years. The Path begins with an alien Hive invasion. In AI Nation, a rogue AI tries to impose abundance and smart homes become fortresses. Foam on the Sand asks how a thousand-year war began. My goal is to finish, translate and publish all three books.",
+    description: "I’ve been writing this trilogy in Russian for over 25 years. The opening novel, The Path of People, begins with an alien Hive invasion. In AI Nation, a rogue AI tries to impose abundance and smart homes become fortresses. Foam on the Sand asks how a thousand-year war began. My goal is to finish, translate and publish all three books.",
   },
   {
     slug: "context-cloud",

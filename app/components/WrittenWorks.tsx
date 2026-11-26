@@ -27,7 +27,7 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
           {/* The Path of People */}
           <div className="reveal">
             <h3 className="font-serif text-2xl text-warm-50 mb-2">
-              {russian ? "«Путь людей»" : "“The Path of People”"}
+              {russian ? "Трилогия «Путь Людей»" : "The Path of People trilogy"}
             </h3>
             <p className="text-warm-200/70 mb-4 leading-relaxed">
               {russian ? "Фантастическая трилогия о сознании ИИ, жертве, вере и о том, что значит сделать выбор." : "A sci-fi trilogy exploring AI consciousness, sacrifice, faith, and what it means to choose."}
@@ -36,7 +36,7 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
               <li>
                 <span className="text-gold-400 text-sm font-medium">{russian ? "Книга 1" : "Book 1"}</span>
                 <p className="text-warm-200/80">
-                  {russian ? "«Пена на песке». Как первая встреча с иным разумом меняет наше представление о самих себе?" : "“Foam on the Sand” — First contact through the lens of identity and connection"}
+                  {russian ? "«Путь Людей». Как первая встреча с иным разумом меняет наше представление о самих себе?" : "“The Path of People” — First contact through the lens of identity and connection"}
                 </p>
               </li>
               <li>
@@ -47,7 +47,7 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
               </li>
               <li>
                 <span className="text-gold-400 text-sm font-medium">{russian ? "Книга 3" : "Book 3"}</span>
-                <p className="text-warm-200/60 italic">{russian ? "Название пока не объявлено" : "To be announced"}</p>
+                <p className="text-warm-200/80">{russian ? "«Пена на песке»" : "“Foam on the Sand”"}</p>
               </li>
             </ul>
           </div>
