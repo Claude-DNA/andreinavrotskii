@@ -17,10 +17,15 @@ export default function WrittenWorks({ russian }: { russian: boolean }) {
             ) : "«Кибернетика на двоих»"}
           </h3>
 
-          {russian && (
+          {russian ? (
             <a href="/writing/problemy-zakhvata" className="reveal block group">
               <h3 className="font-serif text-2xl text-warm-50 underline decoration-gold-500/50 underline-offset-4 group-hover:text-gold-400">«Проблемы захвата технически развитых планет»</h3>
               <p className="mt-2 text-warm-200/70 leading-relaxed">На рассвете Костя замечает в дверях незнакомку. После передач «Свободной Воли» он уверен, что знает, кто перед ним.</p>
+            </a>
+          ) : (
+            <a href="/writing/peculiarities-of-planetary-conquest" className="reveal block group">
+              <h3 className="font-serif text-2xl text-warm-50 underline decoration-gold-500/50 underline-offset-4 group-hover:text-gold-400">Peculiarities of Planetary Conquest</h3>
+              <p className="mt-2 text-warm-200/70 leading-relaxed">At dawn, a stranger appears in the doorway of a ruined office. After the Free Will broadcasts, Kostya thinks he knows exactly who she is.</p>
             </a>
           )}
 

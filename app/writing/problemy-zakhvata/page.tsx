@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
-import { isRussianSite, russianUrl } from "../../site-language";
+import { isRussianSite, russianUrl, englishUrl } from "../../site-language";
 import styles from "../kibernetika-na-dvoikh/reader.module.css";
 import paragraphs from "./manuscript.json";
 
@@ -21,7 +21,7 @@ export default async function StoryPage() {
     <main lang="ru" className={styles.reader}>
       <a href="/#writing">← Книги и сценарии</a>
       <article>
-        <header><h1>Проблемы захвата технически развитых планет</h1><p>Андрей Навроцкий</p></header>
+        <header><h1>Проблемы захвата технически развитых планет</h1><p>Андрей Навроцкий</p><a href={englishUrl + "/writing/peculiarities-of-planetary-conquest"} lang="en" hrefLang="en">Read in English</a></header>
         <div className={styles.prose}>
           {paragraphs.map((paragraph, i) => (
             <Fragment key={i}>
