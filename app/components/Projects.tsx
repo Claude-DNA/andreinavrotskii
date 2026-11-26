@@ -1,10 +1,33 @@
-const projects = [
+type Project = {
+  title: string;
+  titleRu?: string;
+  url: string | null;
+  description: string;
+  descriptionRu?: string;
+  moonshot?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "ContextTube",
+    title: "ConteXtube",
+    titleRu: "ContextTube",
+    moonshot: "https://www.moremoonshots.com/moonshots/923f70cc-86d3-4554-a82f-8dee0531c8fe",
     url: "https://contextube.ai",
     descriptionRu: "Платформа для писателей и сценаристов. Вместе с ИИ здесь можно придумать мир, проработать характеры героев и выстроить сюжет.",
     description:
-      "AI-powered creative development platform for storytellers. Build story worlds, develop characters, and structure narratives with AI as creative partner.",
+      "Authors use Context Cloud Studio to map the characters, places, plot and ideas in a work. ConteXtube publishes that material in five layers. Readers can explore an illustrated feed, while AI agents can request just the depth they need through MCP or REST.",
+  },
+  {
+    title: "Ice and Metal: Per Aspera",
+    url: null,
+    moonshot: "https://www.moremoonshots.com/moonshots/908e326b-d3a7-434a-9514-901dd68312ad",
+    description: "We’re developing a science-fiction drama told through the lens of a documentary crew aboard an asteroid mining ship. When the human and AI miners find life beneath the ice, they have to decide how to protect it from the authorities who want the discovery erased.",
+  },
+  {
+    title: "Finishing a sci-fi trilogy",
+    url: null,
+    moonshot: "https://www.moremoonshots.com/moonshots/086b8867-c0e3-4454-95a7-a055f51c2938",
+    description: "I’ve been writing this trilogy in Russian for over 25 years. The Path begins with an alien Hive invasion. In AI Nation, a rogue AI tries to impose abundance and smart homes become fortresses. Foam on the Sand asks how a thousand-year war began. My goal is to finish, translate and publish all three books.",
   },
   {
     title: "Context Cloud",
@@ -40,9 +63,9 @@ export default function Projects({ russian }: { russian: boolean }) {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {projects.filter((project) => !russian || project.descriptionRu).map((project) => (
             <div
-              key={project.title}
+              key={russian ? project.titleRu ?? project.title : project.title}
               className="reveal group relative rounded-xl border border-charcoal-600/50 bg-charcoal-800/60 p-6 md:p-8 hover:border-gold-500/30 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gold-500/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -53,6 +76,12 @@ export default function Projects({ russian }: { russian: boolean }) {
                 <p className="text-warm-200/70 leading-relaxed mb-4">
                   {russian ? project.descriptionRu : project.description}
                 </p>
+                {!russian && project.moonshot && (
+                  <a href={project.moonshot} aria-label={`Read the ${project.title} Moonshot`}
+                    className="mr-5 inline-block text-sm text-gold-400 hover:underline">
+                    Read the Moonshot
+                  </a>
+                )}
                 {project.url && (
                   <a
                     href={project.url}
