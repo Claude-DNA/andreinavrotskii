@@ -18,8 +18,8 @@ const inter = Inter({
 export async function generateMetadata(): Promise<Metadata> {
   const russian = await isRussianSite();
   const url = russian ? russianUrl : englishUrl;
-  const title = russian ? "Андрей Навроцкий — Создаю. Пишу. Исследую." : "Andrei Navrotskii — Builder. Storyteller. Explorer.";
-  const description = russian ? "Андрей Навроцкий — разработчик, писатель и основатель студии Ohana. Проекты, книги и сценарии на стыке технологий и творчества." : "Self-taught developer and creator building at the intersection of technology and storytelling. Founder of Ohana, a human-AI collaborative studio.";
+  const title = russian ? "Андрей Навроцкий — Творение и творец" : "Andrei Navrotskii — Creature and Creator";
+  const description = russian ? "Рассказы, эссе и проекты Андрея Навроцкого о людях, искусственном интеллекте и ответственности за то, что мы создаём." : "Stories, essays and projects by Andrei Navrotskii on people, artificial intelligence and the responsibility we carry for what we create.";
   return {
     metadataBase: new URL(url),
     title,

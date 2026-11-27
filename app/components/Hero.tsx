@@ -10,7 +10,7 @@ export default function Hero({ russian }: { russian: boolean }) {
           {russian ? "Андрей Навроцкий" : "Andrei Navrotskii"}
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gold-400 tracking-wide font-light animate-fade-in-up">
-          {russian ? "Создаю. Пишу. Исследую." : "Builder. Storyteller. Explorer."}
+          {russian ? "Творение и творец" : "Creature and Creator"}
         </p>
         <div className="mt-12 animate-fade-in-up">
           <a

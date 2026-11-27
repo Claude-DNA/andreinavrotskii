@@ -1,3 +1,18 @@
+const biography = {
+  "en": [
+    "I’ve been writing for most of my life. I’ve never had a publisher. For years I wrote about the choices people might face if the machines they built could make choices of their own. I took a serious interest in AI only recently. I never thought I’d live to see those questions leave the pages of my stories.",
+    "I spent more than fifteen years in senior management. At one end of that career was a studio that made portrait dolls. At the other were nationwide telecom companies. Along the way I set up companies and branch offices, four in all, and ran them myself. Through all those years, writing was the thing I kept coming back to.",
+    "These days I build software by vibe coding. I describe what I have in mind, try what the AI produces, and work with it until the result feels right. Software development is a different craft. There’s a belief behind my experiments that goes back much further: when we make something, we also make ourselves. And whatever part AI plays, I’m responsible for what I put into the world.",
+    "I think of myself as both creature and creator. A complex spiritual being and a primitive animal. Capable of everlasting love and still afraid of the unknown. The balance shifts every day. My life is worth more than the whole universe to me, yet someone else’s life can be worth more than mine."
+  ],
+  "ru": [
+    "Я пишу почти всю жизнь. У меня никогда не было издателя. Много лет назад я писал о выборе, перед которым окажется человек, если созданная им машина тоже сможет выбирать. Всерьёз я заинтересовался искусственным интеллектом совсем недавно. Не думал, что доживу до того дня, когда эти вопросы сойдут со страниц моих рассказов.",
+    "Больше пятнадцати лет я работал руководителем в самых разных компаниях. В моей жизни были и мастерская портретной куклы, и телекоммуникационные компании, работавшие по всей стране. Я с нуля открывал компании и филиалы — всего четыре — и сам ими руководил. И все эти годы возвращался к тому, что любил больше всего: писать.",
+    "Сейчас я делаю программы с помощью вайбкодинга. Объясняю ИИ свой замысел, пробую то, что получилось, и вместе с ним довожу результат до ума. Профессиональная разработка — другое ремесло. А убеждение, с которым я за всё это берусь, гораздо старше моего интереса к ИИ. Создавая что-то, мы создаём и самих себя. И за то, что я выпускаю в мир, отвечаю я.",
+    "Я и творение, и творец. Сложное духовное существо и первобытное животное. Во мне уживаются вечная любовь и страх перед неизвестным, и равновесие между ними всё время меняется. Моя жизнь для меня дороже всей Вселенной, а чья-то чужая жизнь может оказаться дороже моей."
+  ]
+};
+
 export default function About({ russian }: { russian: boolean }) {
   return (
     <section id="about" className="py-24 md:py-32">
@@ -24,30 +39,9 @@ export default function About({ russian }: { russian: boolean }) {
 
           {/* Copy */}
           <div className="max-w-2xl space-y-6 text-warm-200/80 leading-relaxed">
-            <p className="reveal">
-              {russian ? "Я разработчик-самоучка, живу в канадской провинции Британская Колумбия. Создаю инструменты для тех, кто пишет книги и сценарии, а в собственных историях исследую, как технологии меняют нашу жизнь." : <>
-              I&apos;m a self-taught developer and creator based in British Columbia, Canada.
-              I work at the intersection of technology and storytelling — building tools
-              that help people shape narratives, and writing stories that explore where
-              technology might take us.
-            </>}
-            </p>
-            <p className="reveal">
-              {russian ? "Я основал студию Ohana, где люди и ИИ-агенты вместе работают над творческими и техническими проектами. Мне интересно, что мы можем придумать и сделать, когда у искусственного интеллекта появляется роль соавтора." : <>
-              I founded{" "}
-              <span className="text-gold-400">Ohana</span> — a human-AI
-              collaborative studio where humans and AI agents work side by side across
-              creative and technical projects. It&apos;s an experiment in what becomes possible
-              when you stop treating AI as a tool and start treating it as a collaborator.
-            </>}
-            </p>
-            <p className="reveal">
-              {russian ? "Мне нравится шаг за шагом делать вещи, в которых есть смысл. Для этого нужны любопытство, честная работа и уважение к своему ремеслу." : <>
-              I believe in building things that matter — one step at a time. No shortcuts,
-              no hype. Just honest work, genuine curiosity, and a deep respect for the craft
-              of making something real.
-            </>}
-            </p>
+            {biography[russian ? "ru" : "en"].map(paragraph => (
+              <p key={paragraph} className="reveal">{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>
